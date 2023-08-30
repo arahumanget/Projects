@@ -12,11 +12,12 @@
             <th>Responsible Person</th>
             <th>Completed</th>
         </tr>
-        <tr id="template-row" style="display: none;">
-            <td><input type="text" name="activity" placeholder="Enter activity"></td>
-            <td><input type="text" name="responsible" placeholder="Enter responsible person"></td>
+        <tr>
+            <td><input type="text" name="activity" placeholder="Enter activity" oninput="adjustInputWidth(this)" data-min-width="100"></td>
+            <td><input type="text" name="responsible" placeholder="Enter responsible person" oninput="adjustInputWidth(this)" data-min-width="150"></td>
             <td><input type="checkbox"></td>
         </tr>
+        <!-- Add more rows as needed -->
     </table>
     <button id="add-entry">+</button>
     <script src="script.js"></script>

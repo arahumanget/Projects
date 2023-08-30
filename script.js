@@ -10,7 +10,13 @@ document.addEventListener("DOMContentLoaded", function () {
         checklistTable.appendChild(newRow);
     });
 
-    // Handle checkbox logic as before
+    const adjustInputWidth = function(input) {
+        const minWidth = parseInt(input.getAttribute("data-min-width"));
+        const currentWidth = input.offsetWidth;
+        
+        input.style.width = (Math.max(minWidth, currentWidth) + 10) + "px";
+    };
+
     const checkboxes = document.querySelectorAll('input[type="checkbox"]');
     checkboxes.forEach(function (checkbox) {
         checkbox.addEventListener("change", function () {
